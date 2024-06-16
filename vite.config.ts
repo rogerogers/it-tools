@@ -22,14 +22,13 @@ const baseUrl = process.env.BASE_URL ?? '/';
 export default defineConfig({
   plugins: [
     VueI18n({
+      locale: 'zh',
       runtimeOnly: true,
       jitCompilation: true,
       compositionOnly: true,
       fullInstall: true,
       strictMessage: false,
-      include: [
-        resolve(__dirname, 'locales/**'),
-      ],
+      include: [resolve(__dirname, 'locales/**')],
     }),
     AutoImport({
       imports: [
